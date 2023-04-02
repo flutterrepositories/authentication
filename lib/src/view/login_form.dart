@@ -12,7 +12,8 @@ class LoginForm extends StatelessWidget {
   Widget header;
   String googleID;
   String facebookID;
-  LoginForm({required this.header, required this.googleID});
+  LoginForm(
+      {required this.header, required this.googleID, required this.facebookID});
 
   @override
   Widget build(BuildContext context) {
