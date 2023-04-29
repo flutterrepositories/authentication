@@ -18,11 +18,22 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var gid = googleID;
-    FlutterFireUIAuth.configureProviders([
-      GoogleProviderConfiguration(clientId: gid),
-      FacebookProviderConfiguration(clientId: facebookID),
-      AppleProviderConfiguration(),
-    ]);
+    List<ProviderConfiguration> providers =
+        List<ProviderConfiguration>.empty(growable: true);
+
+    if (gid.isNotEmpty) {
+      providers.add(GoogleProviderConfiguration(clientId: gid));
+    }
+
+    if (facebookID.isNotEmpty) {
+      providers.add(FacebookProviderConfiguration(clientId: facebookID));
+    }
+
+    if (Platform.isIOS) {
+      providers.add(AppleProviderConfiguration());
+    }
+
+    FlutterFireUIAuth.configureProviders(providers);
 
     return SignInScreen(
       headerBuilder: (context, constraints, shrinkOffset) {
