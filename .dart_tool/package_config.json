@@ -416,6 +416,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "ui",
+      "rootUri": "file:///Users/matteo.vitolo/.pub-cache/git/ui-7573502eab63745d35a20fcfa69d92a9f9b3995d/",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/matteo.vitolo/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -434,7 +440,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-04-29T17:58:15.374014Z",
+  "generated": "2023-04-30T08:02:32.392791Z",
   "generator": "pub",
   "generatorVersion": "2.19.5"
 }
