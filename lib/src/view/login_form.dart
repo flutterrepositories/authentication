@@ -29,8 +29,10 @@ class LoginForm extends StatelessWidget {
       providers.add(FacebookProviderConfiguration(clientId: facebookID));
     }
 
-    if (Platform.isIOS) {
-      providers.add(AppleProviderConfiguration());
+    if (!kIsWeb) {
+      if (Platform.isIOS) {
+        providers.add(AppleProviderConfiguration());
+      }
     }
 
     FlutterFireUIAuth.configureProviders(providers);
